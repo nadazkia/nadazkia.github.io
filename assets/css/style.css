@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap");
+@keyframes translateX {
+  0% {
+    display: none;
+    transform: translateX(-100%);
+  }
+  100% {
+    display: block;
+    transform: translateX(0%);
+  }
+}
+@keyframes translateY {
+  0% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes dropdown {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "quicksand", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+h2,
+h3 {
+  font-family: "Lora", serif;
+  font-weight: 600;
+  color: #22a39f;
+}
+
+.cover {
+  font-size: 20px;
+  padding: 50px;
+  background-color: #434242;
+  text-align: center;
+  color: white;
+}
+.cover h1 {
+  font-family: "Lora", serif;
+  font-weight: 700;
+}
+
+/* ========== NAVBAR START ============ */
+
+header {
+  display: inline;
+}
+
+nav {
+  font-family: "Lora", serif;
+  display: flex;
+  background-color: #222222;
+  color: white;
+  position: sticky;
+  top: 0px;
+  text-align: center;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 20px;
+  cursor: pointer;
+}
+li a {
+  text-decoration: none;
+  display: flex;
+  color: white;
+  transition: transform 300ms ease-in-out;
+}
+li a:hover {
+  transform: scale(105%);
+}
+
+li:after,
+.dropdown-item a:after {
+  display: block;
+  content: "";
+  border-bottom: 2px solid #ff811a;
+  transform: scaleX(0);
+}
+li:hover:after,
+.dropdown-item a:hover:after {
+  animation: dropdown 0.5s forwards;
+}
+li.dropdown:hover:after {
+  animation: dropdown 0.5s;
+}
+
+li:hover i {
+  transform: rotate(-180deg);
+}
+
+.icon-down {
+  width: 10px;
+  margin-left: 4px;
+}
+
+.dropdown-item {
+  display: none;
+  position: absolute;
+  background-color: #222222;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  animation: translateY 0.5s;
+}
+.dropdown-item a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
+}
+
+.dropdown-item a:hover {
+  border-color: none;
+  transform: scale(1.05);
+}
+
+a:hover .icon-down {
+  transform:rotate(180deg);
+  -webkit-transform:rotate(180deg);
+  -moz-transform:rotate(180deg);
+  -ms-transform:rotate(180deg);
+  -o-transform:rotate(180deg);
+}
+
+
+.dropdown:hover .dropdown-item {
+  display: block; /* Munculin dropdown-item */
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .burger {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin: 0.5rem 0.8rem 0.5rem auto;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    border-radius: 0.2rem;
+    transition: transform 0.3s;
+  }
+  .burger:hover {
+    background: #292929;
+    transform: scale(110%);
+  }
+  .burger span {
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 4px;
+    transition: 500ms;
+  }
+  .burger span:nth-child(1) {
+    transform: translateY(-8px);
+    width: 15px;
+    left: 5px;
+  }
+  .burger span:nth-child(3) {
+    transform: translateY(8px);
+    width: 10px;
+    left: 5px;
+  }
+  .burger.active span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+    width: 20px;
+  }
+  .burger.active span:nth-child(2) {
+    transform: translateX(60px);
+  }
+  .burger.active span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+    width: 20px;
+  }
+  ul {
+    display: none;
+    flex-direction: column;
+  }
+  ul.active {
+    margin: 0;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    position: sticky;
+    overflow: visible;
+    transition: translate 2s;
+    transform: translate(0%);
+  }
+
+  li {
+    margin: 0.5rem 0;
+    transition: transform 1s;
+  }
+  li:hover {
+    transition: 0.5s ease;
+  }
+  li:nth-child(1).active {
+    animation: translateX 0.5s;
+  }
+  li:nth-child(2).active {
+    animation: translateX 0.6s;
+  }
+  li:nth-child(3).active {
+    animation: translateX 0.7s;
+  }
+  li:nth-child(4).active {
+    animation: translateX 0.8s;
+  }
+  .dropdown-item {
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    margin: 0.1rem 1rem;
+    width: 80%;
+    animation: translateX 0.5s;
+  }
+}
+/* ========== NAVBAR END ============ */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 2rem;
+  margin-top: 20px;
+}
+main {
+  padding: 20px;
+  overflow: auto;
+}
+main p {
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.featured-image {
+  max-width: 100%;
+}
+
+.profile header {
+  text-align: center;
+}
+.profile img {
+  text-align: center;
+  height: 200px;
+}
+#content {
+  float: left;
+  width: 70%;
+}
+
+aside {
+  float: right;
+  width: 30%;
+  padding-left: 20px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0 2rem 0.5rem 0;
+}
+td a {
+  color: #222222;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1120px) {
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #222222;
+  text-align: center;
+  font-weight: bold;
+}
+
+a {
+  display: inline-block;
+  transition: transform 300ms;
+}
+
+a:hover {
+  transform: scale(105%);
+}
+/* 
+---- MENCARI KESALAHAN CSS ----
+https://jigsaw.w3.org/css-validator/
+https://codebeautify.org/cssvalidate
+http://csslint.net/
+
+---- MENGECILKAN UKURAN CSS ----
+https://cssnano.co/playground/
+https://cssminifier.com/
+https://www.minifier.org/
+*/

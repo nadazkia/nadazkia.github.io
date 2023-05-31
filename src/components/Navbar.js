@@ -6,13 +6,13 @@ import { NavLink } from "react-router-dom";
 function Navbar() {
   let Links = [
     { name: "Beranda", link: "/" },
-    { name: "Portofolio", link: "/portofolio" },
+    { name: "Portfolio", link: "/portfolio" },
     { name: "Blogs", link: "/blogs" },
     { name: "Contact", link: "/contact" },
   ];
   let [open, setOpen] = useState(false);
   return (
-    <nav className="shadow-lg  w-full fixed top-0 left-0">
+    <nav className="shadow-lg  w-full sticky top-0 left-0 z-10">
       <div className="md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
         <div className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-gray-800">
           <img src={Logo} alt="Logo Nads" width="45px" className="mr-2"></img>
@@ -21,7 +21,8 @@ function Navbar() {
 
         <div
           onClick={() => setOpen(!open)}
-          className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"
+          id="burger"
+          className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden flex-wrap justify-center content-center"
         >
           <ion-icon name={open ? "close" : "menu"}></ion-icon>
         </div>

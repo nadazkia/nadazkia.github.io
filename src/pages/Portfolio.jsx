@@ -11,39 +11,91 @@ function Portfolio() {
         <div className="container xl:w-10/12 xl:mt-auto">
           <div className="w-full self-center px-4">
             <div className="max-w-xl mx-auto text-center mb-16">
-              <h4 className="font-[Poppins] font-semibold text-lg text-primary mb-2"> Portfolio</h4>
-              <h2 className="poppins-bold text-slate-800 text-3xl mb-4 sm:text-4xl lg:text-5xl"> Project Terbaru</h2>
-              <p className="font-medium text-md text-pudar md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit tempora maiores possimus quos qui, id neque consectetur amet nostrum quis.</p>
+              <h4 className="font-[Poppins] font-semibold text-lg text-primary mb-2">
+                {" "}
+                Portfolio
+              </h4>
+              <h2 className="font-bold text-slate-800 text-3xl mb-4 sm:text-4xl lg:text-5xl">
+                {" "}
+                Project Terbaru
+              </h2>
+              <p className="font-medium text-md text-pudar md:text-lg">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reprehenderit tempora maiores possimus quos qui, id neque
+                consectetur amet nostrum quis.
+              </p>
             </div>
           </div>
           <div className="w-full px-4 flex flex-wrap justify-center ">
             <div className="mb-12 p-4 md:w-1/2">
               <div className="rounded-md shadow-md overflow-hidden">
-                <img src="img/portfolio/1.png" alt="Landing Page" width="w-full" />
+                <img
+                  src="img/portfolio/1.png"
+                  alt="Landing Page"
+                  width="w-full"
+                />
               </div>
-              <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">Landing Page Nada Fatiyyah Azkia</h3>
-              <p className="font-[Poppins] font-medium text-base text-pudar">Dibuat dengan menggunakan Tailwind CSS dan ReactJS dengan tambahan react-router-dom</p>
+              <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
+                Landing Page Nada Fatiyyah Azkia
+              </h3>
+              <p className="font-[Poppins] font-medium text-base text-pudar">
+                Dibuat dengan menggunakan Tailwind CSS dan ReactJS dengan
+                tambahan react-router-dom
+              </p>
             </div>
             <div className="mb-12 p-4 md:w-1/2">
               <div className="rounded-md shadow-md overflow-hidden">
-                <img src="img/portfolio/1.png" alt="Landing Page" width="w-full" />
+                <img
+                  src="img/portfolio/1.png"
+                  alt="Landing Page"
+                  width="w-full"
+                />
               </div>
-              <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">Landing Page Nada Fatiyyah Azkia</h3>
-              <p className="font-medium text-base text-pudar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus officia esse, quasi consectetur quos facere sit ex magni temporibus soluta nisi repudiandae quae alias cumque officiis obcaecati eum amet hic</p>
+              <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
+                Landing Page Nada Fatiyyah Azkia
+              </h3>
+              <p className="font-medium text-base text-pudar">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus officia esse, quasi consectetur quos facere sit ex
+                magni temporibus soluta nisi repudiandae quae alias cumque
+                officiis obcaecati eum amet hic
+              </p>
             </div>
             <div className="mb-12 p-4 md:w-1/2">
               <div className="rounded-md shadow-md overflow-hidden">
-                <img src="img/portfolio/1.png" alt="Landing Page" width="w-full" />
+                <img
+                  src="img/portfolio/1.png"
+                  alt="Landing Page"
+                  width="w-full"
+                />
               </div>
-              <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">Landing Page Nada Fatiyyah Azkia</h3>
-              <p className="font-medium text-base text-pudar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus officia esse, quasi consectetur quos facere sit ex magni temporibus soluta nisi repudiandae quae alias cumque officiis obcaecati eum amet hic</p>
+              <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
+                Landing Page Nada Fatiyyah Azkia
+              </h3>
+              <p className="font-medium text-base text-pudar">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus officia esse, quasi consectetur quos facere sit ex
+                magni temporibus soluta nisi repudiandae quae alias cumque
+                officiis obcaecati eum amet hic
+              </p>
             </div>
             <div className="mb-12 p-4 md:w-1/2">
               <div className="rounded-md shadow-md overflow-hidden">
-                <img src="img/portfolio/1.png" alt="Landing Page" width="w-full" />
+                <img
+                  src="img/portfolio/1.png"
+                  alt="Landing Page"
+                  width="w-full"
+                />
               </div>
-              <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">Landing Page Nada Fatiyyah Azkia</h3>
-              <p className="font-medium text-base text-pudar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus officia esse, quasi consectetur quos facere sit ex magni temporibus soluta nisi repudiandae quae alias cumque officiis obcaecati eum amet hic</p>
+              <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
+                Landing Page Nada Fatiyyah Azkia
+              </h3>
+              <p className="font-medium text-base text-pudar">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus officia esse, quasi consectetur quos facere sit ex
+                magni temporibus soluta nisi repudiandae quae alias cumque
+                officiis obcaecati eum amet hic
+              </p>
             </div>
           </div>
         </div>
@@ -54,22 +106,39 @@ function Portfolio() {
         <div className="container">
           <div className="w-full self-center px-4">
             <div className="mx-auto text-center mb-16">
-              <h4 className="font-semibold text-lg text-primary mb-2"> Clients</h4>
-              <h2 className="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl"> Yang Pernah Bekerjasama</h2>
-              <p className="font-medium text-md text-pudar md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur expedita excepturi vitae.</p>
+              <h4 className="font-semibold text-lg text-primary mb-2">
+                {" "}
+                Clients
+              </h4>
+              <h2 className="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl">
+                {" "}
+                Yang Pernah Bekerjasama
+              </h2>
+              <p className="font-medium text-md text-pudar md:text-lg">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                expedita excepturi vitae.
+              </p>
             </div>
           </div>
 
           <div className="w-full px-4">
             <div className="flex flex-wrap items-center justify-center">
-              <Link to="https://instagram.com/nads.dev" className="w-full max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:opacity-100 hover:grayscale-0">
-                <img src="img/clients/nadsvg.svg" width="w-full" alt="Nads.dev" />
+              <Link
+                to="https://instagram.com/nads.dev"
+                className="w-full max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:opacity-100 hover:grayscale-0"
+              >
+                <img
+                  src="img/clients/nadsvg.svg"
+                  width="w-full"
+                  alt="Nads.dev"
+                />
               </Link>
-              <Link to="https://instagram.com/nads.dev" className="w-full max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:opacity-100 hover:grayscale-0">
+              <Link
+                to="https://instagram.com/nads.dev"
+                className="w-full max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:opacity-100 hover:grayscale-0"
+              >
                 <img src="img/clients/dapoernenekpng.png" alt="Dapoer Nenek" />
               </Link>
-              
-
             </div>
           </div>
         </div>

@@ -2,13 +2,9 @@ import { useState } from "react";
 import Button from "./Button";
 // import Logo from "../../public/img/icon-nads-lg.png";
 import { NavLink } from "react-router-dom";
+import { Links } from "../components/IsiNavbar";
 
 function Navbar() {
-  let Links = [
-    { name: "Beranda", link: "/" },
-    { name: "Portfolio", link: "/portfolio" },
-    { name: "Blogs", link: "/blogs" },
-  ];
   let [open, setOpen] = useState(false);
 
   return (
@@ -38,6 +34,7 @@ function Navbar() {
         >
           {Links.map((Link) => (
             <li
+              onClick={() => setOpen(!open)}
               key={Link.name}
               className=" font-[Poppins] md:ml-8 text-lg md:my-0 my-6"
             >
@@ -50,7 +47,7 @@ function Navbar() {
               </NavLink>
             </li>
           ))}
-          <NavLink to="/contact">
+          <NavLink onClick={() => setOpen(!open)} to="/contact">
             <Button>Contact</Button>
           </NavLink>
         </ul>

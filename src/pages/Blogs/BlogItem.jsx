@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 // import { blogList } from "./config/DataBlog"
-
 
 // function BlogItem() {
 //     return (
@@ -13,7 +12,6 @@ import { Link } from "react-router-dom"
 //                             <Link>
 //                                 <img src={isiBlog.cover} alt="Cover" className="w-full max-h-[300px] mx-auto hover:opacity-90" />
 //                             </Link>
-
 
 //                             <div className="pt-3 px-6">
 //                                     <span className=" text-[10px] lg:text-[12px] py-1 px-2 capitalize bg-primary gradient text-white rounded-full">{isiBlog.category}</span>
@@ -41,52 +39,64 @@ import { Link } from "react-router-dom"
 // }
 
 function BlogItem({
-    blog: {
-        id,
-        judul,
-        // category,
-        penulis,
-        fotoPenulis,
-        altFotoPenulis,
-        ditulisTanggal,
-        cover,
-        altCover,
-        deskripsi,
-    }
+  blog: {
+    id,
+    judul,
+    // category,
+    // penulis,
+    // fotoPenulis,
+    // altFotoPenulis,
+    ditulisTanggal,
+    cover,
+    altCover,
+    deskripsi,
+  },
 }) {
-    return (
-        <>
-            <div key={id} className="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+  return (
+    <>
+      <div
+        key={id}
+        className="bg-white rounded-xl shadow-lg overflow-hidden mb-10"
+      >
+        <Link to={`/blogs/${id}#${id}`}>
+          <img
+            src={cover}
+            alt={altCover}
+            className="xl:h-[200px] lg:h-[300px] mx-auto hover:opacity-90 overflow-hidden"
+          />
+        </Link>
 
-                <Link>
-                    <img src={cover} alt={altCover} className="xl:h-[200px] mx-auto hover:opacity-90 overflow-hidden" />
-                </Link>
+        <div className="pt-2 px-6">
+          {/* <span className=" text-[10px] lg:text-[12px] py-1 px-2 capitalize bg-primary gradient text-white rounded-full">{category}</span> */}
+          <Link to={`/blogs/${id}#${id}`}>
+            <h3
+              id={judul}
+              className="block mb-2 mt-4 font-bold text-xl text-slate-800 hover:text-primary truncate transition duration-200 ease-in"
+            >
+              {judul}
+            </h3>
+            <p className="font-[Poppins] font-medium text-base text-pudar mb-6 line-clamp-2">
+              {deskripsi}
+            </p>
+          </Link>
+        </div>
 
-
-                <div className="pt-2 px-6">
-                    {/* <span className=" text-[10px] lg:text-[12px] py-1 px-2 capitalize bg-primary gradient text-white rounded-full">{category}</span> */}
-                    <Link to={`/blog/${id}`}>
-                        <h3 id={judul} className="block mb-2 mt-4 font-bold text-xl text-slate-800 hover:text-primary truncate transition duration-200 ease-in">{judul}</h3>
-                        <p className="font-[Poppins] font-medium text-base text-pudar mb-6 line-clamp-2">{deskripsi}</p>
-                    </Link>
-                </div>
-
-
-                <footer className="pb-8 px-6 flex flex-wrap items-center justify-between" >
-                    <div className="flex">
-                        {/* <img src={fotoPenulis} alt={altFotoPenulis} width={60}/> */}
-                        <p className=" text-pudar text-base">Publish: {ditulisTanggal}</p>
-                        {/* <div className="my-auto px-2">
+        <footer className="pb-8 px-6 flex flex-wrap items-center justify-between">
+          <div className="flex">
+            {/* <img src={fotoPenulis} alt={altFotoPenulis} width={60}/> */}
+            <p className=" text-pudar text-base">Publish: {ditulisTanggal}</p>
+            {/* <div className="my-auto px-2">
                             <p className=" text-pudar text-base">Publish: {ditulisTanggal}</p>
                             <h6 className="font-semibold text-base">{penulis}</h6>
                         </div> */}
-                    </div>
-                    <Link to={`/blog/${id}`} className="mr-5 font-extrabold">→</Link>
-                </footer>
-
-            </div>
-        </>
-    )
+          </div>
+          <Link to={`/blogs/${id}#${id}`} className="mr-5 font-extrabold">
+            →
+          </Link>
+        </footer>
+      </div>
+    </>
+  );
 }
 
-export default BlogItem
+export default BlogItem;

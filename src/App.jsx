@@ -1,10 +1,10 @@
 import React from "react";
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Beranda from "./pages/Beranda";
 import Portfolio from "./pages/Portfolio";
 import Blogs from "./pages/Blogs/HomeBlog";
-import BlogTemplate from "./pages/Blogs/BlogTemplate";
+import Blog from "./pages/Blogs/BlogTemplate";
 import Contact from "./pages/Contact";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Beranda />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/blogs/:id" element={<BlogTemplate />} />
+        <Route path="/blogs/:id" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </>

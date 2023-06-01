@@ -4,24 +4,13 @@ export const blogList = [
     judul: "Sejarah",
     category: "Pengalaman",
     subCategory: ["Pengalaman", "Curhat", "Cerita"],
-    penulis: "Nada Fatiyyah Azkia",
+    penulis: "Siapa aja",
     fotoPenulis: "img/profile.png",
     altFotoPenulis: "Penulis 1",
     ditulisTanggal: "10 Oktober 2022",
     cover: "img/blog/embun.jpg",
     altCover: "G1",
-    deskripsi:`Ukiran Embun terbentuk tahun 2018 oleh seorang anak SMA yang tertarik pada tulisan. Ia mencoba untuk
-                    mengungkapkan rasa melalui tulisan, hingga terbentuklah tagline "Embun yang mengukir rasa segenap
-                    insan tuk menuai kebermanfaatan yang lebih luas".
-                    <br/><br/>
-                    Dalam mengungkapkan rasa, tak sedikit manusia yang lebih memilih menulis daripada berbicara. Merasa
-                    lebih nyaman berbicara pada dirinya sendiri daripada berbicara dengan orang lain. Bertemu dengan
-                    aneka ragam karakteristik manusia, membuatnya semakin bingung. Siapakah manusia yang bisa
-                    dipercaya?. Sampai akhirnya, tulisan menjadi sahabat yang paling dipercaya ketika ingin bercerita.
-                    Berharap ada manfaat dari rasa yang terungkap pada sebuah tulisan. Berharap ada doa-doa baik yang
-                    terpanjat untuk kebahagiaan dunia dan akhirat.
-                    <br/><br/>
-                    Semoga bermanfaat.`,
+    deskripsi: `Ukiran Embun terbentuk tahun 2018 oleh seorang anak SMA yang tertarik pada tulisan. Ia mencoba untuk mengungkapkan rasa melalui tulisan, hingga terbentuklah tagline 'Embun yang mengukir rasa segenap insan tuk menuai kebermanfaatan yang lebih luas'. Dalam mengungkapkan rasa, tak sedikit manusia yang lebih memilih menulis daripada berbicara. Merasa lebih nyaman berbicara pada dirinya sendiri daripada berbicara dengan orang lain. Bertemu dengan aneka ragam karakteristik manusia, membuatnya semakin bingung. Siapakah manusia yang bisa dipercaya?. Sampai akhirnya, tulisan menjadi sahabat yang paling dipercaya ketika ingin bercerita. Berharap ada manfaat dari rasa yang terungkap pada sebuah tulisan. Berharap ada doa-doa baik yang terpanjat untuk kebahagiaan dunia dan akhirat. Semoga bermanfaat.`,
   },
   {
     id: 2,
@@ -34,7 +23,8 @@ export const blogList = [
     ditulisTanggal: "4 Februari 2016",
     cover: "img/blog/kapal.png",
     altCover: "G2",
-    deskripsi:`
+    deskripsi:
+      `
     Bismillahirrahmanirrahim
     Assalamu'alaikum warahmatullaahi wabarakaatuh. 
     
@@ -44,11 +34,9 @@ export const blogList = [
     
     Kapal ini selalu saja siap mengantar orang-orang yang ingin memperbaiki diri tak pernah sekalipun menolak. Apakah ia lelah? Ya. Sangat lelah. Tapi ia tak pernah mengeluh karena ia yakin akan ada keajaiban di setiap perjuangannya. 
     
-    Kapal ini dinamakan:`+
-    <strong>SAFINATUL MUJAHID</strong>+
-    `
+    Kapal ini dinamakan:` +
+      ` "SAFINATUL MUJAHID"` +
+      `
     Mulai dari sini perjuanganku yang akan aku rindukan suatu saat nanti.`,
   },
 ];
-
-

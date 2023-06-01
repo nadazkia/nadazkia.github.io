@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,500&display=swap');
+
+
 .burger-line {
     @apply absolute mr-3 w-[22px] h-[2px] my-2 bg-slate-800 rounded
 }

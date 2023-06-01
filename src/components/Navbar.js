@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
-import Logo from "../img/icon-nads-lg.png";
+// import Logo from "../../public/img/icon-nads-lg.png";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
@@ -8,14 +8,19 @@ function Navbar() {
     { name: "Beranda", link: "/" },
     { name: "Portfolio", link: "/portfolio" },
     { name: "Blogs", link: "/blogs" },
-    { name: "Contact", link: "/contact" },
   ];
   let [open, setOpen] = useState(false);
+
   return (
     <nav className="shadow-lg  w-full sticky top-0 left-0 z-10">
       <div className="md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
         <div className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-gray-800">
-          <img src={Logo} alt="Logo Nads" width="45px" className="mr-2"></img>
+          <img
+            src="img/icon-nads-lg.png"
+            alt="Logo Nads"
+            width="45px"
+            className="mr-2"
+          ></img>
           Nadazkia
         </div>
 
@@ -32,7 +37,10 @@ function Navbar() {
           }`}
         >
           {Links.map((Link) => (
-            <li key={Link.name} className="md:ml-8 text-xl md:my-0 my-6">
+            <li
+              key={Link.name}
+              className=" font-[Poppins] md:ml-8 text-lg md:my-0 my-6"
+            >
               <NavLink
                 to={Link.link}
                 className="text-gray-800 hover:text-gray-400
@@ -42,7 +50,9 @@ function Navbar() {
               </NavLink>
             </li>
           ))}
-          <Button>Submit</Button>
+          <NavLink to="/contact">
+            <Button>Contact</Button>
+          </NavLink>
         </ul>
       </div>
     </nav>

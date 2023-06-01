@@ -12,7 +12,10 @@ function Contact() {
             <div className="max-w-xl mx-auto text-center mb-16">
               <h4 className="font-semibold text-lg text-primary mb-2"> Contact</h4>
               <h2 className="font-bold text-slate-800 text-3xl mb-4 sm:text-4xl lg:text-5xl"> Hubungi Saya</h2>
-              <p className="font-medium text-md text-pudar md:text-lg ">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              {/* <p className="font-medium text-md text-pudar md:text-lg">Komunikasi adalah salah satu cara untuk menjaga hubungan</p> */}
+
+              <p className="font-bold text-lg text-red-500 md:text-xl ">‼ MAINTENANCE ‼ <br /> --- Untuk sementara, kami dapat dihubungi melalui --- <Link to="https://instagram.com/nadazkia"><span className="hover:text-primary transition duration-200 ease-in"> <br/>👉 Instagram 👈</span></Link></p>
+
             </div>
           </div>
 
@@ -52,32 +55,32 @@ function Contact() {
               <p>Jl. Jatipadang Raya No.12</p>
               <p>Jakarta</p>
             </div>
-            <div className="w-full px-4 mb-12 md:w-1/3">
+            <div className="w-full px-4 mb-12 md:w-1/3 mt-4">
               <h3 className="font-semibold text-xl text-white mb-5">Ketegori Tulisan</h3>
               <ul className="text-slate-300">
                 <li>
-                  <Link to="#" className="inline-block text-base hover:text-primary"> Sejarah </Link>
+                  <Link to="/blog/1" className="inline-block text-base hover:text-primary"> Sejarah </Link>
                 </li>
                 <li>
-                  <Link to="#" className="inline-block text-base hover:text-primary"> Kapal </Link>
+                  <Link to="/blog/2" className="inline-block text-base hover:text-primary"> Kapal </Link>
                 </li>
               </ul>
             </div>
 
-            <div className="w-full px-4 mb-12 md:w-1/3">
+            <div className="w-full px-4 mb-12 md:w-1/3 mt-4">
               <h3 className="font-semibold text-xl text-white mb-5">Tautan</h3>
               <ul className="text-slate-300">
                 <li>
-                  <Link to="#" className="inline-block text-base hover:text-primary"> Beranda </Link>
+                  <Link to="/" className="inline-block text-base hover:text-primary"> Beranda </Link>
                 </li>
                 <li>
-                  <Link to="#" className="inline-block text-base hover:text-primary"> Portfolio </Link>
+                  <Link to="/portfolio" className="inline-block text-base hover:text-primary"> Portfolio </Link>
                 </li>
                 <li>
-                  <Link to="#" className="inline-block text-base hover:text-primary"> Blogs </Link>
+                  <Link to="/blogs" className="inline-block text-base hover:text-primary"> Blogs </Link>
                 </li>
                 <li>
-                  <Link to="#" className="inline-block text-base hover:text-primary"> Contact </Link>
+                  <Link to="/contact" className="inline-block text-base hover:text-primary"> Contact </Link>
                 </li>
               </ul>
             </div>
@@ -101,7 +104,7 @@ function Contact() {
               </Link>
 
               {/* Youtube */}
-              <Link to="https://youtube.com/nadazkia" className="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-primary hover:bg-primary hover:text-white">
+              <Link to="https://www.youtube.com/@nadazkia/" className="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-primary hover:bg-primary hover:text-white">
                 <svg role="img" width={20} className="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg>
               </Link>
             </div>

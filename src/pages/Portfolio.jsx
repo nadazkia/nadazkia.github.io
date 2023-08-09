@@ -7,16 +7,14 @@ import { Outlet, Link } from "react-router-dom";
 function Portfolio() {
   return (
     <>
-      <section id="portfolio" className="pt-20 bg-slate-100">
+      <section id="portfolio" className="pt-32 pb-28 bg-slate-100">
         <div className="container xl:w-10/12 xl:mt-auto">
           <div className="w-full self-center px-4">
             <div className="max-w-xl mx-auto text-center mb-16">
               <h4 className="font-[Poppins] font-semibold text-lg text-primary mb-2">
-                {" "}
                 Portfolio
               </h4>
               <h2 className="font-bold text-slate-800 text-3xl mb-4 sm:text-4xl lg:text-5xl">
-                {" "}
                 Project Terbaru
               </h2>
               <p className="font-medium text-md text-pudar md:text-lg">
@@ -107,11 +105,9 @@ function Portfolio() {
           <div className="w-full self-center px-4">
             <div className="mx-auto text-center mb-16">
               <h4 className="font-semibold text-lg text-primary mb-2">
-                {" "}
                 Clients
               </h4>
               <h2 className="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl">
-                {" "}
                 Yang Pernah Bekerjasama
               </h2>
               <p className="font-medium text-md text-pudar md:text-lg">

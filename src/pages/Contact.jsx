@@ -1,12 +1,14 @@
+import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import { Links } from "../components/IsiNavbar";
 // import Button from "../components/Button";
 
 function Contact() {
+  // const [input, isiInput] = useState('')
   return (
     <>
       {/* Contact Start */}
-      <section id="contact" className="pt-20 bg-slate-100">
+      <section id="contact" className="pt-32 pb-28 bg-slate-100">
         <div className="container xl:w-10/12 xl:mt-auto">
           <div className="w-full self-center px-4">
             <div className="max-w-xl mx-auto text-center mb-16">
@@ -31,20 +33,23 @@ function Contact() {
             </div>
           </div>
 
-          <form action="">
+          <form action="mailto:nadazkia18@gmail.com" method="post">
             <div className="w-full lg:w-2/3 lg:mx-auto">
               <div className="w-full px-4 mb-8">
                 <label
                   htmlFor="name"
                   className="text-base text-primary font-bold"
                 >
-                  Nama
+                  Nama Lengkap
                 </label>
                 <input
                   type="text"
                   id="name"
+                  placeholder="Ketik nama Lengkap disini"
                   className="w-full bg-slate-200 text-slate-800 p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+                // onChange={event => isiInput(event.target.value)}
                 />
+                {/* <p>Preview: {name}</p> */}
               </div>
               <div className="w-full px-4 mb-8">
                 <label
@@ -54,7 +59,8 @@ function Contact() {
                   Email
                 </label>
                 <input
-                  type="text"
+                  type="email"
+                  placeholder="Ketik email dan pastikan dengan benar ya"
                   id="email"
                   className="w-full bg-slate-200 text-slate-800 p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
                 />
@@ -68,6 +74,7 @@ function Contact() {
                 </label>
                 <textarea
                   type="text"
+                  placeholder="Pesan apa yang ingin disampaikan?"
                   id="message"
                   className="w-full bg-slate-200 text-slate-800 p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32"
                 ></textarea>
@@ -84,19 +91,23 @@ function Contact() {
       {/* Contact End */}
 
       {/* Footer Start */}
-      <footer className="bg-slate-800 pt-24 pb-12">
+      <footer className="pt-24 pb-20 bg-slate-800">
         <div className="container">
-          <div className="flex flex-wrap">
-            <div className="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
-              <h2 className="font-bold text-4xl text-white mb-5">Nadazkia</h2>
-              <h3 className="font-bold text-2xl mb-2">Hubungi Kami</h3>
-              <p>nadazkia18@gmail.com</p>
-              <p>Jl. Jatipadang Raya No.12</p>
-              <p>Jakarta</p>
+          <div className="flex flex-wrap mx-auto">
+            <div className="w-full self-center px-4 mb-12 text-slate-300 font-medium md:w-1/3">
+              <h2 className="font-[Poppins] font-bold text-4xl text-white mb-5">Nadazkia</h2>
+              <h3 className="font-bold text-2xl mb-1">Hubungi Kami</h3>
+              {/* <p className="">nadazkia18@gmail.com</p> */}
+              <p className="">
+                <Link> <span className="font-semibold hover:text-primary "> Jaani House</span></Link> <br />
+                Jl. Jatipadang Raya No.12 <br />
+                Jakarta Selatan<br />
+              </p>
             </div>
+
             <div className="w-full px-4 mb-12 md:w-1/3 mt-4">
               <h3 className="font-semibold text-xl text-white mb-5">
-                Ketegori Tulisan
+                Kategori Tulisan
               </h3>
               <ul className="text-slate-300">
                 <li>
@@ -256,6 +267,9 @@ function Contact() {
       <Outlet />
     </>
   );
+
+
 }
 
 export default Contact;
+

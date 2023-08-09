@@ -11,10 +11,11 @@ function App() {
   return (
     <>
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Beranda />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/" element={<Blogs />} />
         <Route path="/blogs/:id" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

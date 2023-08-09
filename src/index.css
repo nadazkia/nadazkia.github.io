@@ -6,15 +6,15 @@
 
 
 .burger-line {
-    @apply absolute mr-3 w-[22px] h-[2px] my-2 bg-slate-800 rounded
+    @apply absolute -ml-[0.55rem] w-[18px] h-[2px] bg-slate-800 rounded-full
 }
 
-.burger-line.active>span:nth-child(1){
-    @apply origin-top-left rotate-45 translate-y-8 duration-300}
+.active span:nth-child(1){
+    @apply origin-top-left rotate-45 left-[17px] mb-[2rem] duration-500}
     
-.burger-line.active>span:nth-child(2){
+.active span:nth-child(2){
     @apply translate-x-60 duration-300
 }
-.burger-line.active>span:nth-child(3){
-    @apply origin-bottom-left -rotate-45 translate-y-0 duration-300
+.active span:nth-child(3){
+    @apply origin-bottom-left -rotate-45 left-[17px] mt-[0.16rem] duration-500
 }

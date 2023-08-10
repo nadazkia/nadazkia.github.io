@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Beranda from "./pages/Beranda";
-import Portfolio from "./pages/Portfolio";
+import Portfolio from "./pages/Portfolio/Portfolio";
 import Blogs from "./pages/Blogs/HomeBlog";
 import Blog from "./pages/Blogs/BlogTemplate";
 import Contact from "./pages/Contact";

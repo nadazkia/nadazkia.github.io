@@ -21,9 +21,9 @@ function Blog() {
                   </h4>
                 </div>
                 <div className="text-justify">
-                  <text className="font-medium text-md text-pudar md:text-lg whitespace-pre-line align-bottom">
+                  <p className="font-medium text-md text-pudar md:text-lg whitespace-pre-line align-bottom">
                     {data.deskripsi}
-                  </text>
+                  </p>
                 </div>
               </div>
             ))}

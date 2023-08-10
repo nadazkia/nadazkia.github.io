@@ -1,8 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
-// import Logo from "../../public/img/icon-nads-lg.png";
+import { Links } from "./IsiNavbar";
 import { NavLink } from "react-router-dom";
-import { Links } from "../components/IsiNavbar";
 // import Burger from "./Burger";
 
 function Navbar() {
@@ -77,10 +76,4 @@ function Navbar() {
     </nav>
   );
 }
-// const burger = document.getElementById("burger");
-// const menu = document.getElementById("menu");
-// burger.addEventListener("click", () => {
-//   menu.classList.toggle("active");
-// });
-
 export default Navbar;

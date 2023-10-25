@@ -27,20 +27,4 @@ const DataBlog = [
       "Bismillahirrahmanirrahim\n\nAssalamu'alaikum warahmatullaahi wabarakaatuh.\nBagaimana kabarmu hari ini? Semoga selalu dalam lindungan Allah SWT \n\nAku ingin bercerita sedikit tentang sebuah kapal kokoh. Kapal yang selalu siap saat sang pemilik laut memerintah laut untuk mengujinya. Kapal yang dengan kokohnya dapat menghadapi marahnya lautan hingga sampai ke tujuan. Kapal yang setiap sisinya ilapisi dengan iman, setiap bagiannya dibangun dengan ketakwaan, setiap penerangannya berasal dari cahaya Qur'an, dan setiap yang berada diatasnya adalah orang-orang yang berusaha menuju pada perbaikan. Setiap ruangan di kapal ini pasti ada pembatas antara laki-laki dan perempuan.\n\nKapal ini selalu saja siap mengantar orang-orang yang ingin memperbaiki diri tak pernah sekalipun menolak. Apakah ia lelah? Ya. Sangat lelah. Tapi ia tak pernah mengeluh karena ia yakin akan ada keajaiban di setiap perjuangannya. \n\nKapal ini dinamakan:\n'SAFINATUL MUJAHID'\n\nMulai dari sini perjuanganku yang akan aku rindukan suatu saat nanti."
   }
 ]
-// "deskripsi":
-//   `
-// Bismillahirrahmanirrahim
-// Assalamu'alaikum warahmatullaahi wabarakaatuh. 
-
-// Bagaimana kabarmu hari ini? Semoga selalu dalam lindungan Allah SWT 
-
-// Aku ingin bercerita sedikit tentang sebuah kapal kokoh. Kapal yang selalu siap saat sang pemilik laut memerintah laut untuk mengujinya. Kapal yang dengan kokohnya dapat menghadapi marahnya lautan hingga sampai ke tujuan. Kapal yang setiap sisinya ilapisi dengan iman, setiap bagiannya dibangun dengan ketakwaan, setiap penerangannya berasal dari cahaya Qur'an, dan setiap yang berada diatasnya adalah orang-orang yang berusaha menuju pada perbaikan. Setiap ruangan di kapal ini pasti ada pembatas antara laki-laki dan perempuan.
-
-// Kapal ini selalu saja siap mengantar orang-orang yang ingin memperbaiki diri tak pernah sekalipun menolak. Apakah ia lelah? Ya. Sangat lelah. Tapi ia tak pernah mengeluh karena ia yakin akan ada keajaiban di setiap perjuangannya. 
-
-// Kapal ini dinamakan:` +
-//   ` "SAFINATUL MUJAHID"` +
-//   `
-// Mulai dari sini perjuanganku yang akan aku rindukan suatu saat nanti.`,
-
 export default DataBlog

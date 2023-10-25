@@ -1,5 +1,6 @@
-import { useParams } from "react-router-dom";
+import { useParams, Outlet } from "react-router-dom";
 import DataBlog from "./config/db";
+import Footer from "../../components/Footer";
 
 function Blog() {
   const { id } = useParams();
@@ -15,13 +16,13 @@ function Blog() {
                   className="max-w-xl mx-auto text-center mt-16 mb-4"
                 >
                   <h4
-                    className="font-[Poppins] font-semibold text-4xl text-primary mb-2"
+                    className="font-[Poppins] uppercase font-semibold text-4xl text-primary pb-5"
                   >
                     {data.judul}
                   </h4>
                 </div>
                 <div className="text-justify">
-                  <p className="font-medium text-md text-pudar md:text-lg whitespace-pre-line align-bottom">
+                  <p className="font-[Poppins] font-medium text-md text-gray-700 md:text-lg whitespace-pre-line">
                     {data.deskripsi}
                   </p>
                 </div>
@@ -31,6 +32,10 @@ function Blog() {
           <div className="w-full px-4 flex flex-wrap justify-center "></div>
         </div>
       </section>
+      {/* Footer Start */}
+      <Footer />
+      <Outlet />
+      {/* Footer End */}
     </>
   );
 }

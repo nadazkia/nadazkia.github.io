@@ -8,10 +8,10 @@ import Blog from "./pages/Blogs/BlogTemplate";
 import Contact from "./pages/Contact";
 
 function App() {
+
   return (
     <>
       <Navbar />
-
       <Routes>
         <Route path="/" element={<Beranda />} />
         <Route path="/portfolio" element={<Portfolio />} />

@@ -13,43 +13,20 @@ function Contact() {
   const navigate = useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(nama, email, pesan)
     setNama('')
     setEmail('')
     setPesan('')
     navigate("/contact")
 
-    // WITH APP SCRIPT IN GSHEET
-    // const formFile = document.querySelector("form")
-    // const formData = new FormData(formFile)
-    // const url = "https://script.google.com/macros/s/AKfycbwt4pTurt7qfcc3R1SRlK7-YDUPOFUWHGB2vIFpfpdS2DOTdcqFQHFxBjR7hSoRpL5_xw/exec"
-    // fetch(url, {
-    //   method: "POST",
-    //   // mode: "cors",
-    //   credentials: 'include',
-    //   body: formData
-    // })
-    //   .then(res => {
-    //     res.json()
-    //   })
-    //   .then(data => {
-    //     console.log(data)
-    //   })
-    //   .catch(err => { console.log(err) })
-
     localStorage.setItem(`${nama}`, "Pesan Terkirim")
     setAuth(true)
 
-
-    // ISI APP SCRIPT
-    // const sheets = SpreadsheetApp.openByUrl("Link gsheet")
-    // const sheetName = sheets.getSheetByName("Nama Sheet")
-    // function doPost(e){
-    //   let data = e.parameter
-    //   sheetName.appendRow([data.nama, data.email, data.pesan])
-    //   return ContentService.createTextOutput('Success')
-    // }
-
+    // UNTUK APP SCRIPT
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyngL-atrBPCVb9CNa7i_NWq_Eu7HgaKak2jFiVzK0gUoSnW_clwHjkGXt0NNoeFXWT/exec'
+    const form = document.forms['contactform']
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => console.log('Success!'))
+      .catch(error => console.error('Error!', error.message))
     // ------------------------------
 
     // WITH AXIOS AND sheet.best
@@ -93,7 +70,6 @@ function Contact() {
             </motion.div>
 
           </div>
-          // <Header judul="Contact" subjudul="MAINTENANCE" deskripsi="Maaf, silakan dm ke instagram nadazkia" />
           :
           <div className="container xl:w-10/12 xl:mt-auto">
             <div className="w-full self-center px-4">
@@ -101,85 +77,77 @@ function Contact() {
                 <Header judul="Contact" subjudul="Hubungi Saya" />
               </motion.div>
             </div>
-            {/* <form
-              action="https://docs.google.com/forms/d/e/1FAIpQLSefSuWxSDQLzBp-Des1O4-n3jxDyRjxrJpQULVIKugNDBS01g/formResponse"
-              method="post"
-            // onSubmit={handleSubmit}
-            // onSubmit={(e) => handleSubmit(e)}
-            >
-              <div className="w-full lg:w-2/3 lg:mx-auto">
-                <div className="w-full px-4 mb-8">
-                  <label
-                    htmlFor="name"
-                    className="text-base text-primary font-bold"
-                  >
-                    Nama Lengkap
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="entry.1299449051"
-                    // name="Nama"
-                    value={nama}
-                    placeholder="Ketik nama Lengkap disini"
-                    required
-                    className="w-full bg-slate-200 text-slate-800 p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
-                    onChange={(e) => setNama(e.target.value)}
-                  />
-                </div>
-                <div className="w-full px-4 mb-8">
-                  <label
-                    htmlFor="email"
-                    className="text-base text-primary font-bold"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="Ketik email dan pastikan dengan benar ya"
-                    id="email"
-                    name="entry.1036221706"
-                    // name="Email"
-                    value={email}
-                    required
-                    className="w-full bg-slate-200 text-slate-800 p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
-                    onChange={(e) => setEmail(e.target.value)}
 
-                  />
-                </div>
-                <div className="w-full px-4 mb-8">
-                  <label
-                    htmlFor="message"
-                    className="text-base text-primary font-bold"
-                  >
-                    Pesan
-                  </label>
-                  <textarea
-                    type="text"
-                    placeholder="Pesan apa yang ingin disampaikan?"
-                    id="message"
-                    name="entry.797991374"
-                    // name="Pesan"
-                    value={pesan}
-                    required
-                    className="w-full bg-slate-200 text-slate-800 p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32"
-                    onChange={(e) => setPesan(e.target.value)}
+            <motion.div variants={zoomIn} initial="awal" whileInView="akhir"  >
+              <form name="contactform"
+                onSubmit={(e) => handleSubmit(e)}>
+                <div className="flex flex-col w-full lg:w-2/3 lg:mx-auto">
+                  <div className="w-full px-4 mb-8">
+                    <label className="text-base text-primary font-bold">
+                      Nama Lengkap
+                    </label>
+                    <input
+                      type="text"
+                      id="nama"
+                      name="nama"
+                      value={nama}
+                      placeholder="Ketik nama Lengkap disini"
+                      required
+                      className="mt-1 w-full bg-white text-slate-800 p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+                      onChange={(e) => setNama(e.target.value)}
+                    />
+                  </div>
+                  <div className="w-full px-4 mb-8">
+                    <label
+                      htmlFor="email"
+                      className="text-base text-primary font-bold"
+                    > Email
+                    </label>
+                    <input
+                      type="email"
+                      placeholder="Ketik email dan pastikan dengan benar ya"
+                      id="email"
+                      name="email"
+                      value={email}
+                      required
+                      className="mt-1 w-full bg-white text-slate-800 p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+                      onChange={(e) => setEmail(e.target.value)}
 
-                  ></textarea>
+                    />
+                  </div>
+                  <div className="w-full px-4 mb-8">
+                    <label
+                      htmlFor="message"
+                      className="text-base text-primary font-bold"
+                    > Pesan
+                    </label>
+                    <textarea
+                      type="text"
+                      placeholder="Pesan apa yang ingin disampaikan?"
+                      id="pesan"
+                      name="pesan"
+                      value={pesan}
+                      required
+                      className="mt-1 w-full bg-white text-slate-800 p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32"
+                      onChange={(e) => setPesan(e.target.value)}
+
+                    ></textarea>
+                  </div>
+                  <div className="w-full px-4 mb-8">
+                    <button type="submit" className="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">
+                      Kirim
+                    </button>
+                  </div>
                 </div>
-                <div className="w-full px-4 mb-8">
-                  <button className="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">
-                    Kirim
-                  </button>
-                </div>
-              </div>
-            </form> */}
-            <motion.div variants={zoomIn} initial="awal" whileInView="akhir">
+              </form>
+            </motion.div>
+
+            {/* <motion.div variants={zoomIn} initial="awal" whileInView="akhir">
               <div id="form" className="overflow-hidden m-auto w-full text-center justify-center right-0">
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSefSuWxSDQLzBp-Des1O4-n3jxDyRjxrJpQULVIKugNDBS01g/viewform?embedded=true" title="form" height="870" frameborder="0" marginheight="0" marginwidth="0" className="overflow-hidden w-full"
                   onSubmit={(e) => handleSubmit(e)}>Loading…</iframe>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         }
       </section>

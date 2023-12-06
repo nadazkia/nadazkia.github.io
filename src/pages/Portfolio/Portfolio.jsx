@@ -1,6 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import DataPortofolio from "./config/db";
+import DataPortofolio from "./config/dbportfolio";
+import DataKerjasama from "./config/dbkerjasama";
 import Header from "../../components/Header";
 
 
@@ -37,22 +38,21 @@ function Portfolio() {
         <div className="container xl:w-10/12 xl:mt-auto">
           <div className="w-full self-center px-4">
             <motion.div variants={zoomIn} initial="awal" whileInView="akhir">
-              <Header judul="Portfolio" subjudul="Project Terbaru" deskripsi="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reprehenderit tempora maiores possimus quos qui, id neque
-                consectetur amet nostrum quis." />
+              <Header judul="Portfolio" subjudul="Project Terbaru" deskripsi="Kumpulan web app terbaik yang pernah dibuat" />
             </motion.div>
           </div>
           <div className="w-full px-4 flex flex-wrap justify-center ">
             {DataPortofolio.map((data) => {
               return (
-                <div key={data.id} className="mb-12 p-4 md:w-1/2">
-                  <motion.div variants={zoomIn} initial="awal" whileInView="akhir">                    <div className="rounded-md shadow-md overflow-hidden">
-                    <img
-                      src={data.cover}
-                      alt={data.altCover}
-                      width="w-full"
-                    />
-                  </div>
+                <Link key={data.id} to={data.link} target="_blank" className="mb-12 p-4 md:w-1/2 hover:-translate-y-2 hover:bg-white hover:bg-opacity-40 rounded-xl ease-in-out duration-300">
+                  <motion.div variants={zoomIn} initial="awal" whileInView="akhir">
+                    <div className="rounded-md shadow-md overflow-hidden">
+                      <img
+                        src={data.cover}
+                        alt={data.altCover}
+                        className="bg-cover"
+                      />
+                    </div>
                     <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
                       {data.judul}
                     </h3>
@@ -60,7 +60,7 @@ function Portfolio() {
                       {data.deskripsi}
                     </p>
                   </motion.div>
-                </div>
+                </Link>
               )
             })}
 
@@ -81,8 +81,7 @@ function Portfolio() {
                   Yang Pernah Bekerjasama
                 </h2>
                 <p className="font-medium text-md text-pudar md:text-lg">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-                  expedita excepturi vitae.
+                  Daftar clients yang pernah bekerjasama dalam pembuatan project
                 </p>
               </motion.div>
             </div>
@@ -90,25 +89,21 @@ function Portfolio() {
 
           <div className="w-full px-4">
             <div className="flex flex-wrap items-center justify-center">
-              <motion.div variants={fadeUp} initial="awal" whileInView="akhir"
-                className="w-full max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:opacity-100 hover:grayscale-0">
-                <Link
-                  to="https://instagram.com/nads.dev"
-                >
-                  <img
-                    src="img/clients/nadsvg.svg"
-                    alt="Nads.dev"
-                  />
-                </Link>
-              </motion.div>
-              <motion.div variants={fadeUp} initial="awal" whileInView="akhir"
-                className="w-full max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:opacity-100 hover:grayscale-0">
-                <Link
-                  to="https://instagram.com/nads.dev"
-                >
-                  <img src="img/clients/dapoernenekpng.png" alt="Dapoer Nenek" />
-                </Link>
-              </motion.div>
+              {DataKerjasama.map((data) => {
+                return (
+                  <motion.div key={data.id} variants={fadeUp} initial="awal" whileInView="akhir"
+                    className="w-full max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:opacity-100 hover:grayscale-0">
+                    <Link
+                      to={data.link} target="_blank"
+                    >
+                      <img
+                        src={data.src}
+                        alt={data.alt}
+                      />
+                    </Link>
+                  </motion.div>
+                )
+              })}
             </div>
           </div>
         </div>

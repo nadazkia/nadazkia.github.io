@@ -61,11 +61,11 @@ function Beranda() {
                   </span>
                 </h1>
                 <h2 className="font-medium text-pudar text-lg mb-5 lg:text-2xl">
-                  Content Creator | Guru Matematika
+                  Content Creator | Mathematics Teacher | Web Developer
                 </h2>
                 <p className="font-medium text-pudar mb-10 leading-r">
-                  Belajar matematika itu menyenangkan bukan,
-                  <span className="text-bold"> jelas bukan!</span>
+                  Apapun bisa kita pelajari. Pantang menyerah bukan pilihan kan?
+                  <span className="font-bold"> jelas bukan!</span>
                 </p>
               </motion.div>
               <motion.div variants={fadeRight} initial="awal"
@@ -123,12 +123,10 @@ function Beranda() {
                   Tentang Saya
                 </h4>
                 <h2 className="font-bold text-gray-800 text-3xl mb-5 max-w-md lg:text-4xl">
-                  Yuk, belajar matematika!
+                  Yuk, bekerja sama!
                 </h2>
                 <p className="font-medium text-base text-pudar max-w-xl lg:text-lg">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Consequatur accusantium nostrum distinctio quas! Sequi
-                  praesentium illo eius! Accusamus, sunt? Veniam?
+                  Lulusan S1 Pendidikan Matematika UIN Syarif Hidayatullah Jakarta. Pernah bekerja sebagai guru matematika selama 6 bulan dan informatika selama 1 bulan. Aktif mengajar privat. Memiliki beberapa projek web app dengan Framework NextJS dan Laravel. Bertanggungjawab dan dapat diandalkan.  
                 </p>
               </motion.div>
             </div>

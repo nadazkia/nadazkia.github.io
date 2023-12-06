@@ -39,5 +39,20 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> -->
+
+    <!-- <script>
+      // ISI APP SCRIPT
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbyngL-atrBPCVb9CNa7i_NWq_Eu7HgaKak2jFiVzK0gUoSnW_clwHjkGXt0NNoeFXWT/exec";
+      const form = document.forms["contactform"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
+      // ------------------------------
+    </script> -->
   </body>
 </html>
